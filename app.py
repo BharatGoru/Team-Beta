@@ -74,7 +74,9 @@ def quiz():
     
     return interpretation
 
-
+def create_bar_chart_data(scores):
+    data = [{'label': 'Score', 'value': score} for score in scores]    #  Dsiplay evaluation in bar-chart format
+    return data
 
 
 @app.route('/result')
