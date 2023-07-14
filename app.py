@@ -75,9 +75,12 @@ def quiz():
     return interpretation
 
 def create_bar_chart_data(scores):
-    data = [{'label': 'Score', 'value': score} for score in scores]    #  Dsiplay evaluation in bar-chart format
+    data = [{'label': 'Score', 'value': score} for score in scores]    #  Display evaluation in bar-chart format
     return data
 
+def create_pie_chart_data(scores):
+    data = [{'label': f'Score {i+1}', 'value': score} for i, score in enumerate(scores)]     #  Display evaluation in pie-chart format
+    return data
 
 @app.route('/result')
     return render_template('result.html')
